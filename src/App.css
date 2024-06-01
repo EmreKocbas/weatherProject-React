@@ -1,42 +1,64 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-body{
+
+/* Set background color for the body */
+body {
   background-color: antiquewhite;
 }
-.items{
+
+/* Styles for the items container */
+.items {
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap:15px;
-  
+  gap: 15px;
 }
-.items h2{
+
+/* Center align text inside h2 elements within .items */
+.items h2 {
   text-align: center;
 }
-.items img{
+
+/* Set the height of images inside .items */
+.items img {
   height: 70px;
 }
+
+/* Style the p elements inside .items */
 .items p {
   text-align: center;
   font-weight: 600;
 }
-.imgCenter{
-width: 200px;
-display: grid;
-margin: 0 auto;
-place-items: center;
+
+/* Center the content inside .imgCenter and set its width */
+.imgCenter {
+  width: 200px;
+  display: grid;
+  margin: 0 auto;
+  place-items: center;
 }
 
-.item{
+/* General style for each item in the items container */
+.item {
   background-color: rgba(0, 0, 0, 0.212);
-  -webkit-backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); /* For Safari */
   backdrop-filter: blur(5px);
   width: 100%;
   border-radius: 8px;
 }
 
-.container{
+/* Specific style for the first item (a0) */
+.a0 {
+  box-sizing: border-box;
+  border: 1px solid #000;
+  background-color: rgb(255, 255, 255);
+  -webkit-backdrop-filter: blur(5px); /* For Safari */
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+}
+
+/* Style for the container class */
+.container {
   font-family: "Rubik", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
@@ -49,34 +71,25 @@ place-items: center;
   justify-content: center;
 }
 
-    
-    .a0{
-      box-sizing: border-box;
-border: 1px solid #000;
-      background-color: rgb(255, 255, 255);
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-      border-radius: 5px;
-    }
-    
-    @media only screen and (max-width: 767px) {
-      .items{
-        display: grid;
-  grid-template-columns: repeat(1, 1fr);
-      }.selectStyle{
+/* Responsive styles for screens smaller than 767px */
+@media only screen and (max-width: 767px) {
+  .items {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .selectStyle {
     width: 180px;
   }
-  .container{
+  .container {
     height: auto;
     margin: 30px;
   }
-    }
-      
-    @media only screen and (min-width: 768px) and (max-width: 1023px){
-      .items{
-        display: grid;
-  grid-template-columns: repeat(3, 1fr);
+}
 
-      }
-    }
-      
+/* Responsive styles for screens between 768px and 1023px */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
